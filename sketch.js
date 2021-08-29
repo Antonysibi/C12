@@ -31,8 +31,10 @@ function draw() {
   createLeaves();
   createApples();
 
-  var select_apples = Math.round(random,(1,2));
-  var select_leaves = Math.round(random,(1,2));
+  var select_apples = Math.round(random,(400,400));
+  var select_leaves = Math.round(random,(400,400))
+  
+
 
   if (World.frameCount % 80 == 0) {
     if (select_apples == 1){
@@ -40,8 +42,8 @@ function draw() {
     }
   }    
 
-  if(World.frameCount % 80 == 0){
-    if(select_leaves == 1){
+  if(World.frameCount % 60 == 0){
+    if(select_leaves == 2){
        createLeaves()
     }
   }
@@ -50,14 +52,14 @@ function draw() {
 }
 
 function createLeaves(){
-  var leaf = createSprite(200,Math.round(random(50, 350)),40, 10, 10);
+  var leaf = createSprite(Math.round(random(50, 350)),40, 10, 10);
   leaf.addImage(leafImg);
   leaf.velocityY = 3
   leaf.scale = 0.05
 }
 
 function createApples(){
-  var apple = createSprite(200,Math.round(random(50, 350)),40, 10, 10);
+  var apple = createSprite(Math.round(random(50, 350)),40, 10, 10);
   apple.addImage(appleImg);
   apple.velocityY = 3
   apple.scale = 0.05
