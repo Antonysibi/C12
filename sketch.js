@@ -31,8 +31,8 @@ function draw() {
   createLeaves();
   createApples();
 
-  var select_apples = Math.round(random,(1, 4));
-  var select_leaves = Math.round(random,(1, 4))
+  var select_apples = Math.round(random,(1, 3));
+  var select_leaves = Math.round(random,(1, 3));
   
 
 
